@@ -1,6 +1,8 @@
 package ext;
 
 import dao.IDao;
+import org.springframework.stereotype.Repository;
+
 
 public class DaoImplV2 implements IDao {
 

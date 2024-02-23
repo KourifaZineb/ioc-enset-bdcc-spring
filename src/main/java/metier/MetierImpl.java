@@ -1,6 +1,9 @@
 package metier;
 
 import dao.IDao;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+
 
 public class MetierImpl implements IMetier{
     private IDao dao;
@@ -9,13 +12,12 @@ public class MetierImpl implements IMetier{
         this.dao = dao;
     }
 
-    public MetierImpl() {
-    }
+    public MetierImpl() { }
 
     @Override
     public double calcul() {
         double t = dao.getData();
-        double res = t * 23;
+        double res = t * 2;
         return res;
     }
 
